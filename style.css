@@ -1,0 +1,339 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: rgb(19, 19, 116);
+}
+
+#header1{
+background-color: white;
+   width: 100%; 
+   height: 100vh;
+   background-image: url(Images/background\ image.jpeg);
+   background-size: cover;
+   background-position: center;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 170px;
+    margin-top: -30px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px ;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    color: rgb(19, 19, 116);
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: plum;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.home{
+    margin-top: 7%;
+    font-size: 30 px;
+}
+
+.home h1{
+    font-size: 60px;
+    margin-top: 10px;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin: 1.5rem 1rem -1rem 0;
+}
+
+/*About me page*/
+#header2 nav a{
+    background-color: white;
+       width: 100%; 
+       height: 100vh;
+       background-size: cover;
+       background-position: center;
+    }
+#about{
+    padding: 130px 0;
+    background-color: rgb(241, 241, 251);
+    background-image: url(Images/background\ 2.jpg);
+}
+
+.title{
+    margin-top: 70px;
+    font-size:50px ;
+    font-weight: 600;
+}
+
+#about p{
+    margin-top: 20px;
+}
+
+#about img{
+    margin-top: 30px;
+    width: 25vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-2.4rem);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col-1{
+    flex-basis: 35%;
+}
+
+.col-1 img{
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 0 1rem rgb(89, 89, 180);
+    margin: -60px;
+}
+
+.col-2{
+    flex-basis: 60%;
+}
+
+.more{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: rgb(162, 162, 234);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem rgb(19, 19, 116);
+    font-size: 1rem;
+    color: rgb(19,19,116);
+    font-weight: 600;
+    transition: -5s ease;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.more:hover{
+    box-shadow: none;
+
+}
+
+/*Contact page*/
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-right form{
+    width: 100%;
+    align-items: center;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0 ;
+    outline: none;
+    background-color: rgb(217, 233, 239);
+    padding: 15px;
+    margin: 15px 0;
+    
+}
+form .more{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+ form{
+    margin-top: 70px;
+ }
+
+ /*Gallery section*/
+
+ #gallery{
+   
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+   
+   
+ }
+ .container1{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+ }
+ .imgContainer{
+    width: 100%;
+    height:500px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+ }
+ .slide-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px 0 30px;
+ }
+ .img1{
+    height: 370px;
+    position: relative;
+    width: 240px;
+    filter: saturate(10%);
+    transition: 0.7s;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 20px;
+ }
+.button{
+    position: absolute;
+    width: 240px;
+    height: 370px;
+    transition: 0.7s;
+    background-color:rgba(0,0,0,0.4);
+    border-radius: 20px;
+}
+.button:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+#slide1:target ~ .imgContainer #img1,
+#slide1:target ~ .imgContainer #button1{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slide2:target ~ .imgContainer #img2,
+#slide2:target ~ .imgContainer #button2{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slide3:target ~ .imgContainer #img3,
+#slide3:target ~ .imgContainer #button3{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slide4:target ~ .imgContainer #img4,
+#slide4:target ~ .imgContainer #button4{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slide5:target ~ .imgContainer #img5,
+#slide5:target ~ .imgContainer #button5{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slide6:target ~ .imgContainer #img6,
+#slide6:target ~ .imgContainer #button6{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slide7:target ~ .imgContainer #img7,
+#slide7:target ~ .imgContainer #button7{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slide1:target~ .imgContainer{
+    left: 60%;
+}
+
+#slide2:target~ .imgContainer{
+    left: 40%;
+}
+#slide3:target~ .imgContainer{
+    left: 20%;
+}
+#slide4:target~ .imgContainer{
+    left: 0%;
+}
+#slide5:target~ .imgContainer{
+    left: -20%;
+}
+#slide6:target~ .imgContainer{
+    left: -40%;
+}
+#slide7:target~ .imgContainer{
+    left: -60%;
+}
